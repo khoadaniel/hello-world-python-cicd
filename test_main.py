@@ -11,3 +11,7 @@ class some_tests(TestCase):
     def test_add_function_2(self):
         with self.assertRaises(TypeError):
             add(1, 'a')
+
+    def test_add_function_new(self):
+        result = add(5, 5)
+        self.assertEqual(result, 10)
