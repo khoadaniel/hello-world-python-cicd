@@ -11,7 +11,3 @@ class some_tests(TestCase):
     def test_add_function_2(self):
         with self.assertRaises(TypeError):
             add(1, 'a')
-
-
-if __name__ == '__main__':
-    test_add_function()
