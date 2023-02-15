@@ -11,14 +11,20 @@ jobs:
       - checkout
       - python/install-packages:
           pkg-manager: pip
-      - run: python main.py
+      - run:
+          name: run the main.py file
+          command: python main.py
   test:
     working_directory: ~/my-python-repo
     docker:
       - image: cimg/python:3.10.2
     steps:
       - checkout
-      - run: pytest
+      - python/install-packages:
+          pkg-manager: pip
+      - run:
+          name: Run test
+          command: pytest
 
 workflows:
   build_and_test:
