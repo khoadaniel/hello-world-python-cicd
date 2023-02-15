@@ -14,4 +14,4 @@ class some_tests(TestCase):
 
     def test_add_function_new(self):
         result = add(5, 5)
-        self.assertEqual(result, 30)
+        self.assertEqual(result, 10)
